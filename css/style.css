@@ -1,0 +1,80 @@
+body {
+	text-align: center;
+	padding: 30px;
+}
+
+h2 {
+	margin-top: 50px;
+}
+
+.box {
+	display: inline-block;
+	cursor: pointer;
+    width: 100px;
+	height: 100px;
+    border-width: 40px;
+	border-style: solid;
+	border-color: cyan magenta yellow black;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.box1:hover,
+.box1:focus {
+	border-color: yellow black cyan magenta;
+}
+
+.box2 {
+	width: 0;
+}
+
+.box2:hover,
+.box2:focus{
+	width: 100px;
+}
+
+.box3 {
+	width: 0;
+	height: 0;
+}
+
+.box3:hover,
+.box3:focus{
+	width: 100px;
+	height: 100px;
+}
+
+@-webkit-keyframes rotate-borders {
+  25% { border-color: black cyan magenta yellow; }
+  50% { border-color: yellow black cyan magenta; }
+  75% { border-color: magenta yellow black cyan; }
+  100% { border-color: cyan magenta yellow black; }
+}
+
+@-moz-keyframes rotate-borders {
+  25% { border-color: black cyan magenta yellow; }
+  50% { border-color: yellow black cyan magenta; }
+  75% { border-color: magenta yellow black cyan; }
+  100% { border-color: cyan magenta yellow black; }
+}
+
+@-o-keyframes rotate-borders {
+  25% { border-color: black cyan magenta yellow; }
+  50% { border-color: yellow black cyan magenta; }
+  75% { border-color: magenta yellow black cyan; }
+  100% { border-color: cyan magenta yellow black; }
+}
+
+@keyframes rotate-borders {
+  25% { border-color: black cyan magenta yellow; }
+  50% { border-color: yellow black cyan magenta; }
+  75% { border-color: magenta yellow black cyan; }
+  100% { border-color: cyan magenta yellow black; }
+}
+
+.box4 {
+  -webkit-animation: rotate-borders 6s infinite;
+  -moz-animation: rotate-borders 6s infinite;
+  -o-animation: rotate-borders 6s infinite;
+  animation: rotate-borders 6s infinite;
+}
