@@ -44,18 +44,10 @@ h2 {
 }
 
 @keyframes rotate-borders {
-  25% {
-      border-color: black cyan magenta yellow;
-  }
-  50% {
-      border-color: yellow black cyan magenta;
-  }
-  75% {
-      border-color: magenta yellow black cyan;
-  }
-  100% {
-      border-color: cyan magenta yellow black;
-  }
+  25% { border-color: black cyan magenta yellow; }
+  50% { border-color: yellow black cyan magenta; }
+  75% { border-color: magenta yellow black cyan; }
+  100% { border-color: cyan magenta yellow black; }
 }
 
 .box4 {
