@@ -1,20 +1,96 @@
+/* Base
+------------------------------------------------------- */
 body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: calc(16px + 0.3vw);
+  font-weight: 300;
+  line-height: 1.4;
   text-align: center;
-  padding: 30px;
+  padding: 40px 30px 30px;
+}
+
+/* Typography
+------------------------------------------------------- */
+h1,
+h2 {
+  margin: 0 0 0.8em;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  font-weight: 700;
 }
 
 h2 {
-  margin-top: 50px;
+  font-size: 1.2em;
+  line-height: 1.3;
+  font-weight: 400;
 }
 
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #00a7e3;
+}
+
+/* Footer
+------------------------------------------------------- */
+footer {
+  font-size: 0.9em;
+  padding: 20px;
+  margin-top: 50px;
+  border-top: 1px solid #ccc;
+}
+
+/* CSS Grid Layout
+------------------------------------------------------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.grid-container > div {
+  border: 1px solid #ccc;
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Warning message if using old browser
+that does not support CSS Grid Layout.
+------------------------------------------------------- */
+.warning {
+  padding: 20px;
+  margin-bottom: 30px;
+  background: #f7b563;
+  border: 1px solid #e88d1a;
+  border-radius: 3px;
+}
+
+.warning a {
+  color: #fff;
+}
+
+@supports (display: grid) {
+  .warning {
+    display: none;
+  }
+}
+
+/* Example boxes
+------------------------------------------------------- */
 .box {
   display: inline-block;
   cursor: pointer;
   width: 100px;
   height: 100px;
-  border-width: 40px;
+  border-width: 35px;
   border-style: solid;
   border-color: cyan magenta yellow black;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -43,6 +119,13 @@ h2 {
   height: 100px;
 }
 
+@-webkit-keyframes rotate-borders {
+  25% { border-color: black cyan magenta yellow; }
+  50% { border-color: yellow black cyan magenta; }
+  75% { border-color: magenta yellow black cyan; }
+  100% { border-color: cyan magenta yellow black; }
+}
+
 @keyframes rotate-borders {
   25% { border-color: black cyan magenta yellow; }
   50% { border-color: yellow black cyan magenta; }
@@ -51,5 +134,6 @@ h2 {
 }
 
 .box4 {
-  animation: rotate-borders 6s infinite;
+  -webkit-animation: rotate-borders 6s infinite;
+          animation: rotate-borders 6s infinite;
 }
