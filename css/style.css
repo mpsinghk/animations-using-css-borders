@@ -155,3 +155,43 @@ that does not support CSS Grid Layout.
   border-width: 0 170px 170px 0;
   border-color: transparent magenta yellow transparent;
 }
+
+.box8:hover,
+.box8:focus {
+  width: 0;
+  height: 0;
+  border-width: 85px;
+  border-color: transparent magenta yellow black;
+}
+
+.box9:hover,
+.box9:focus {
+  width: 0;
+  height: 0;
+  border-width: 170px 85px 0 85px;
+  border-color: cyan transparent transparent transparent;
+}
+
+.box10:hover,
+.box10:focus {
+  width: 0;
+  height: 0;
+  border-width: 85px 170px 85px 0;
+  border-color: transparent magenta transparent transparent;
+}
+
+.box11:hover,
+.box11:focus {
+  width: 0;
+  height: 0;
+  border-width: 0 85px 170px 85px;
+  border-color: transparent transparent yellow transparent;
+}
+
+.box12:hover,
+.box12:focus {
+  width: 0;
+  height: 0;
+  border-width: 85px 0 85px 170px;
+  border-color: transparent transparent transparent black;
+}
